@@ -29,16 +29,5 @@ Node.js 14.17.0
 JSON Server 0.16.3
 
 
-Como instalar
-Baixe ou clone este repositório usando git clone https://github.com/giordanna/projeto-cadastro-pessoa.git;
-Dentro do diretório, instale as dependências usando npm install.
-Como executar
-Execute ng serve para executar a versão de desenvolvimento. Depois acesse http://localhost:4200/.
-
-Para executar o servidor de endpoints de API, em um outro terminal na mesma pasta execute npm run json-server. A API poderá ser acessada via http://localhost:3000/.
-
-Como compilar/construir
-Execute ng build para buildar o projeto. Para buildar a versão de produção adicione a flag --prod. Os arquivos serão armazenados do diretório dist.
-
 Dúvidas:
 Caso há alguma dúvida em relação a este repositório, envie para mor.alcantara@gmail.com
