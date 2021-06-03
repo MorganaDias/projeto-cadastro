@@ -7,6 +7,7 @@ Escopo
 Criar um projeto Angular 6, utilizando a abordagem SPA com as seguintes funcionalidades:
 
 Construir a estrutura do projeto utilizando o npm (gerenciador de pacotes do Node.js);
+
 Criar uma pagina de cadastro de Pessoa com os seguintes campos: ID, Nome, Email, Idade, Login, Senha e Status (ativo/inativo);
 Criar uma listagem dos usuários cadastrados, através de uma GRID;
 Criar a rota linkando uma página a outra (Adicionar Pessoa e Listar Pessoa);
