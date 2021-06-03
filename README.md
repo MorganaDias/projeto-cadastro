@@ -40,5 +40,5 @@ Para executar o servidor de endpoints de API, em um outro terminal na mesma past
 Como compilar/construir
 Execute ng build para buildar o projeto. Para buildar a versão de produção adicione a flag --prod. Os arquivos serão armazenados do diretório dist.
 
-Dúvidas
+Dúvidas:
 Caso há alguma dúvida em relação a este repositório, envie para mor.alcantara@gmail.com
