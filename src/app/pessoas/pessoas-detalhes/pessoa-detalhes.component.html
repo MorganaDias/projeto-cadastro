@@ -1,0 +1,75 @@
+< h4  class = " list-group-item active " > Detalhes da pessoa </ h4 >
+< div  * ngIf = " pessoa == null; else mostrarDetalhes " >
+  < div  class = " list-group-item " >
+    < h4  class = " list-group-item-header " >
+      Nenhuma pessoa separada
+    </ h4 >
+    < p  class = " list-group-item-text " >
+      Por favor, clique em uma das pessoas cadastradas para mostrar seus detalhes.
+    </ p >
+  </ div >
+</ div >
+< ng-template  #mostrarDetalhes >
+  < div  class = " list-group-item " >
+    < h4  class = " list-group-item-header " >
+      EU IA
+    </ h4 >
+    < p  class = " list-group-item-text " >
+      {{pessoa.id}}
+    </ p >
+  </ div >
+  < div  class = " list-group-item " >
+    < h4  class = " list-group-item-header " >
+      Nome
+    </ h4 >
+    < p  class = " list-group-item-text " >
+      {{pessoa.nome}}
+    </ p >
+  </ div >
+  < div  class = " list-group-item " >
+    < h4  class = " list-group-item-header " >
+      E-mail
+    </ h4 >
+    < p  class = " list-group-item-text " >
+      {{pessoa.email}}
+    </ p >
+  </ div >
+  < div  class = " list-group-item " >
+    < h4  class = " list-group-item-header " >
+      Conecte-se
+    </ h4 >
+    < p  class = " list-group-item-text " >
+      {{pessoa.login}}
+    </ p >
+  </ div >
+  < div  class = " list-group-item " >
+    < h4  class = " list-group-item-header " >
+      Senha
+    </ h4 >
+    < p  class = " list-group-item-text " * ngIf = " senhaInvisivel; else mostrarSenha " >
+      < button  class = " btn btn-danger " type = " button " (click) = " senhaInvisivel = false " >
+        Mostrar senha
+      </ botão >
+    </ p >
+    < ng-template  #mostrarSenha >
+      < div  class = " list-group-item-text " >
+        < p >
+          < button  class = " btn btn-warning " type = " button " (click) = " senhaInvisivel = true " >
+            Esconder senha
+          </ botão >
+        </ p >
+        < p >
+          {{pessoa.senha}}
+        </ p >
+      </ div >
+    </ ng-template >
+  </ div >
+  < div  class = " list-group-item " >
+    < h4  class = " list-group-item-header " >
+      Status
+    </ h4 >
+    < p  class = " list-group-item-text alert " [ngClass] = " {'alert-success': pessoa.status, 'alert-danger':! pessoa.status} " >
+      {{pessoa.status? "Ativo": "Inativo"}}
+    </ p >
+  </ div >
+</ ng-template >

@@ -1,0 +1,45 @@
+< div  class = " row " >
+  < h3 > Pessoas cadastradas </ h3 >
+  < div  class = " col-xs-12 form-group " >
+    < input  type = " text "
+           (keyup) = " filtrarPessoas () "
+           [(ngModel)] = " consulta " classe = " controle de formulário "
+           placeholder = " Filtrar pelo nome ... " />
+  </ div >
+</ div >
+< div  class = " row " >
+  < div  class = " col-xs-12 " >
+    < a  class = " col-sm-6 link-sem-estilo " routerLink = " / lista / {{pessoa.id}} "
+       * ngFor = " deixar pessoa de pessoasPaginadas " >
+      < div  class = " panel panel-default " >
+        < div  class = " panel-header " >
+          {{pessoa.nome}}
+        </ div >
+        < div  class = " panel-body " >
+           {{pessoa.login}}
+        </ div >
+      </ div >
+    </ a >
+  </ div >
+</ div >
+< div  class = " row " >
+  < div  class = " col-xs-12 " >
+    < ul  * ngIf = " pager.pages && pager.pages.length " class = " pagination pagination-sm " >
+      < li  [ngClass] = " {disabled: pager.currentPage === 1} " >
+        < Uma  (clique) = " onMudarPaginas (1) " > & laquo; </ a >
+      </ li >
+      < li  [ngClass] = " {disabled: pager.currentPage === 1} " >
+        < Uma  (clique) = " onMudarPaginas (pager.currentPage - 1) " > & lt; </ a >
+      </ li >
+      < li  * ngFor = " deixar página de pager.pages " [ngClass] = " {ativo: pager.currentPage === página} " >
+        < Uma  (clique) = " onMudarPaginas (página) " > {{page}} </ a >
+      </ li >
+      < li  [ngClass] = " {disabled: pager.currentPage === pager.totalPages} " >
+        < Uma  (clique) = " onMudarPaginas (pager.currentPage + 1) " > & gt; </ a >
+      </ li >
+      < li  [ngClass] = " {disabled: pager.currentPage === pager.totalPages} " >
+        < Uma  (clique) = " onMudarPaginas (pager.totalPages) " > & raquo; </ a >
+      </ li >
+    </ ul >
+  </ div >
+</ div >
